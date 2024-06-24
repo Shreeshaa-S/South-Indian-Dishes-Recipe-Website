@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dosai - South Indian Dish Recipes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>South Indian Dish Recipes</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="upload.html">Upload Recipe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="recipe-header">
+      <h1>Dosai</h1>
+      <div class="ratings">
+        <span>★★★★☆</span> <span>Based on 257 ratings</span>
+      </div>
+      <div class="recipe-meta">
+        <span>65.2k <i class="icon-heart"></i></span>
+        <span><i class="icon-save"></i> Save</span>
+        <span><i class="icon-share"></i> Share</span>
+        <span><i class="icon-app"></i> In app</span>
+      </div>
+      <div class="author">
+        <img src="venkatesh_bhatt.jpg" alt="Venkatesh Bhatt">
+        <div>
+          <span>Venkatesh Bhatt</span>
+          <span>Renowned South Indian Chef</span>
+          <a href="https://www.kitchenstories.com" target="_blank">www.kitchenstories.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-info">
+      <div class="difficulty">
+        <span>Difficulty</span>
+        <span>Medium 👌</span>
+      </div>
+      <div class="preparation-time">
+        <span>Preparation</span>
+        <span>20 min</span>
+      </div>
+      <div class="baking-time">
+        <span>Cooking</span>
+        <span>10 min</span>
+      </div>
+      <div class="resting-time">
+        <span>Resting</span>
+        <span>8 hr (Fermentation)</span>
+      </div>
+    </div>
+
+    <div class="tab-menu">
+      <button class="tab-link active" onclick="scrollToSection('ingredients')">Ingredients</button>
+      <button class="tab-link" onclick="scrollToSection('steps')">Steps</button>
+      <button class="tab-link" onclick="scrollToSection('comments')">Comments</button>
+    </div>
+
+    <div id="ingredients" class="tab-content">
+      <h2>Ingredients</h2>
+      <div class="servings">
+        <button onclick="adjustServings(-1)">-</button>
+        <span id="serving-count">1</span>
+        <button onclick="adjustServings(1)">+</button>
+        <span>Servings</span>
+      </div>
+      <ul>
+        <li><span class="amount" data-base-amount="2">2 cups</span> <span class="ingredient">Rice</span></li>
+        <li><span class="amount" data-base-amount="1">1 cup</span> <span class="ingredient">Urad Dal</span></li>
+        <li><span class="amount" data-base-amount="1">1 tsp</span> <span class="ingredient">Fenugreek Seeds</span></li>
+        <li><span class="amount" data-base-amount="0.5">0.5 tsp</span> <span class="ingredient">Salt</span></li>
+        <li><span class="amount" data-base-amount="1">1 cup</span> <span class="ingredient">Water</span></li>
+        <li><span class="amount" data-base-amount="1">1 tbsp</span> <span class="ingredient">Oil</span></li>
+      </ul>
+    </div>
+
+    <div id="steps" class="tab-content">
+      <h2>Steps</h2>
+      <ol>
+        <li>Soak rice, urad dal, and fenugreek seeds separately for at least 4 hours.</li>
+        <li>Grind the soaked ingredients separately and then mix them together with salt and water to form a batter.</li>
+        <li>Let the batter ferment overnight or for at least 8 hours.</li>
+        <li>Heat a tawa or non-stick pan, pour a ladle of batter, and spread it in a circular motion to form a thin dosai.</li>
+        <li>Drizzle oil around the edges and cook until golden brown. Flip and cook the other side if desired.</li>
+        <li>Serve hot with chutney and sambar.</li>
+      </ol>
+    </div>
+
+    <div id="comments" class="tab-content">
+      <h2>Comments</h2>
+      <div class="comment">
+        <p><strong>User456:</strong> Perfect dosai recipe!</p>
+      </div>
+      <!-- Add more comments as needed -->
+    </div>
+
+    <div class="more-ideas">
+      <h3>More delicious ideas for you</h3>
+      <div class="recipe-card">
+        <img src="podi_idli.jpg" alt="Podi Idli">
+        <div class="recipe-details">
+          <span class="time">20 min</span>
+          <span class="diet">Vegetarian</span>
+        </div>
+        <p class="recipe-title">Podi Idli</p>
+        <p class="recipe-author">Venkatesh Bhatt</p>
+        <a href="recipe1.html" class="view-recipe">View Recipe</a>
+      </div>
+      <div class="recipe-card">
+        <img src="kulipaniyaram.jpg" alt="Kulipaniyaram">
+        <div class="recipe-details">
+          <span class="time">25 min</span>
+          <span class="diet">Vegetarian</span>
+        </div>
+        <p class="recipe-title">Kulipaniyaram</p>
+        <p class="recipe-author">Venkatesh Bhatt</p>
+        <a href="recipe3.html" class="view-recipe">View Recipe</a>
+      </div>
+      <div class="recipe-card">
+        <img src="poori_masal.jpg" alt="Poori Masal">
+        <div class="recipe-details">
+          <span class="time">40 min</span>
+          <span class="diet">Vegetarian</span>
+        </div>
+        <p class="recipe-title">Poori Masal</p>
+        <p class="recipe-author">Venkatesh Bhatt</p>
+        <a href="recipe4.html" class="view-recipe">View Recipe</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

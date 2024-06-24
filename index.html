@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>South Indian Dish Recipes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>South Indian Dish Recipes</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="upload.html">Upload Recipe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Recipes</h1>
+    <!-- Add search functionality -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search recipes by ingredient...">
+      <button onclick="searchRecipes()">Search</button>
+    </div>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <img src="podi_idli.jpg" alt="Podi Idli">
+        <div class="recipe-details">
+          <span class="time">20 min</span>
+          <span class="diet">Vegetarian</span>
+        </div>
+        <p class="recipe-title">Podi Idli</p>
+        <p class="recipe-author">Venkatesh Bhatt</p>
+        <a href="recipe1.html" class="view-recipe">View Recipe</a>
+      </div>
+      <div class="recipe-card">
+        <img src="dosai.jpg" alt="Dosai">
+        <div class="recipe-details">
+          <span class="time">30 min</span>
+          <span class="diet">Vegetarian</span>
+        </div>
+        <p class="recipe-title">Dosai</p>
+        <p class="recipe-author">Venkatesh Bhatt</p>
+        <a href="recipe2.html" class="view-recipe">View Recipe</a>
+      </div>
+      <div class="recipe-card">
+        <img src="kulipaniyaram.jpg" alt="Kulipaniyaram">
+        <div class="recipe-details">
+          <span class="time">25 min</span>
+          <span class="diet">Vegetarian</span>
+        </div>
+        <p class="recipe-title">Kulipaniyaram</p>
+        <p class="recipe-author">Venkatesh Bhatt</p>
+        <a href="recipe3.html" class="view-recipe">View Recipe</a>
+      </div>
+      <div class="recipe-card">
+        <img src="poori_masal.jpg" alt="Poori Masal">
+        <div class="recipe-details">
+          <span class="time">40 min</span>
+          <span class="diet">Vegetarian</span>
+        </div>
+        <p class="recipe-title">Poori Masal</p>
+        <p class="recipe-author">Venkatesh Bhatt</p>
+        <a href="recipe4.html" class="view-recipe">View Recipe</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Function to search recipes by ingredient
+    function searchRecipes() {
+      var input, filter, cards, card, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      cards = document.querySelectorAll('.recipe-card');
+      for (i = 0; i < cards.length; i++) {
+        card = cards[i];
+        txtValue = card.textContent || card.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

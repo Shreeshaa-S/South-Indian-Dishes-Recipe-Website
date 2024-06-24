@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Recipe - Kitchen Stories</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Kitchen Stories</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="upload.html">Upload Recipe</a></li>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Upload Recipe</h2>
+    <form action="upload.html" method="post" enctype="multipart/form-data">
+      <label for="title">Recipe Title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" name="ingredients" required></textarea>
+      <label for="steps">Steps:</label>
+      <textarea id="steps" name="steps" required></textarea>
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+      <button type="submit">Upload Recipe</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
